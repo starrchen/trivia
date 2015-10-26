@@ -16,18 +16,17 @@ var setScore = function() {
 
 var triviaPrompts = [
   // question : answer choices
-  [ "Question 1", ["Answer 1A", "Answer 1B", "Answer 1C"] ],
-  [ "Question 2", ["Answer 2A", "Answer 2B", "Answer 2C"] ],
-  [ "Question 3", ["Answer 3A", "Answer 3B", "Answer 3C"] ],
-  [ "Question 4", ["Answer 4A", "Answer 4B", "Answer 4C"] ],
-  [ "Question 5", ["Answer 5A", "Answer 5B", "Answer 5C"] ],
+  [ "Question 1", ["Answer 1A", "Answer 1B", "Answer 1C"], "C", ["A", "B"] ],
+  [ "Question 2", ["Answer 2A", "Answer 2B", "Answer 2C"], "B", ["A", "C"] ],
+  [ "Question 3", ["Answer 3A", "Answer 3B", "Answer 3C"], "C", ["A", "B"] ],
+  [ "Question 4", ["Answer 4A", "Answer 4B", "Answer 4C"], "A", ["B", "C"] ],
+  [ "Question 5", ["Answer 5A", "Answer 5B", "Answer 5C"], "B", ["A", "C"] ],
 ];
 
 // adds "Question 1" to the question div
 var addQuestion = function() {
-  $(".question").append(triviaPrompts[questionCount][0]);
+  $(".question").text(triviaPrompts[questionCount][0]);
 };
-// addQuestion();
 
 // adds the answer choices to 3 answer divs
 var addAnswers = function(){
@@ -35,7 +34,6 @@ var addAnswers = function(){
   $("#B").text( triviaPrompts[questionCount][1][1] );
   $("#C").text( triviaPrompts[questionCount][1][2] );
 };
-// addAnswers();
 
 // clicking a CORRECT answer div:
 // (1) changes the text color to white,
@@ -44,42 +42,49 @@ var addAnswers = function(){
 
 var chooseAnswer = function(){
 
-  if (clickCount < 1) {
-
-    var rightAnswer = function() {
-      $(this).css("color", "white"); // (1)
-      $("#B").css("color", "grey"); $("#C").css("color", "grey"); //(2)
-      $(".right-or-wrong").show();
-      $(".right-or-wrong").text("Right!");
+  var rightAnswer = function() {
+    $(this).css("color", "white"); // (1)
+      //change other answers to grey
+      $("#" + triviaPrompts[questionCount][3][0]).css("color", "grey");
+      $("#" + triviaPrompts[questionCount][3][1]).css("color", "grey"); //(2)
+    $(".right-or-wrong").show();
+    $(".right-or-wrong").text("Right!");
+    if (clickCount < 1) {
       score = score + 10;
-      setScore();
-      clickCount++;
-      questionCount++;
-    };
+    }
+    setScore();
+    clickCount++;
+    $(".next").show();
+  };
 
-    $("#A").on("click", rightAnswer);
 
-    // // clicking on a WRONG answer div: (1), (2), and (3) remain the same with different right-or-wrong text and different score
+  // // clicking on a WRONG answer div: (1), (2), and (3) remain the same with different right-or-wrong text and different score
 
-    var wrongAnswer = function () {
-      console.log(this);
+  var wrongAnswer = function () {
+    $(".answer").css("color", "grey"); //(2)
+    $(this).css("color", "white"); // (1)
+    $(".right-or-wrong").show();
+    $(".right-or-wrong").text("Wrong, it was " +  $("#" + triviaPrompts[questionCount][2]).text());
+    clickCount++;
+    $(".next").show();
+  };
 
-      $(".answer").css("color", "grey"); //(2)
-      $(this).css("color", "white"); // (1)
-      $(".right-or-wrong").show();
-      $(".right-or-wrong").text("Wrong, it was " + $("#A").text());
-      questionCount++;
-      clickCount++;
-    };
 
-    $("#B").on("click", wrongAnswer);
-    $("#C").on("click", wrongAnswer);
-  }
-  else {
-  }
+  var answerChoices = function() {
+    $("#" + triviaPrompts[questionCount][2]).on("click", rightAnswer);
+    $("#" + triviaPrompts[questionCount][3][0]).on("click", wrongAnswer);
+    $("#" + triviaPrompts[questionCount][3][1]).on("click", wrongAnswer);
+  };
 
+  answerChoices();
 };
 
-if (questionCount >= 2) {
-
-}
+$(".next").on("click", function(){
+  questionCount++;
+  addQuestion();
+  addAnswers();
+  $(".right-or-wrong").hide();
+  $(".answer").css("color", "black");
+  clickCount = 0;
+  chooseAnswer();
+});

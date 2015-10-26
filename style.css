@@ -54,7 +54,16 @@ h1{
 .score {
   width: 200px;
   margin: 0 auto;
+  margin-bottom: 20px;
   background-color: indigo;
+  color: white;
+  padding: 10px;
+}
+
+.next {
+  width: 200px;
+  margin: 0 auto;
+  background-color: firebrick;
   color: white;
   padding: 10px;
 }

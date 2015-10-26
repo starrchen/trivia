@@ -1,0 +1,65 @@
+body {
+  background-color: black;
+  margin: 0 auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1{
+  padding-top: 20px;
+  color: white;
+}
+
+#gameboard {
+  width: 500px;
+  height: 500px;
+  background-color: dimgrey;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.question {
+  width: 400px;
+  background-color: palegreen;
+  color: black;
+  margin: auto;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#answers{
+  margin-bottom: 20px;
+}
+
+.answer {
+  width: 400px;
+  background-color: darkorange;
+  color: black;
+  margin: auto;
+  padding: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.right-or-wrong {
+  width: 200px;
+  background-color: lavender;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.score {
+  width: 200px;
+  margin: 0 auto;
+  background-color: indigo;
+  color: white;
+  padding: 10px;
+}
+
+.image {
+  padding: 10px;
+  margin: 0 auto;
+}

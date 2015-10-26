@@ -86,11 +86,12 @@ $(".next").on("click", function(){
   addQuestion();
   addAnswers();
   $(".right-or-wrong").hide();
+  $(".next").hide();
   $(".answer").css("color", "black");
   clickCount = 0;
   chooseAnswer();
 
-  // if (questionCount >= (triviaPrompts.length - 1)) {
-  //   $(".next").text("Game over!")
-  // }
+  if (questionCount >= (triviaPrompts.length - 1)) {
+      $(".next").text("Game over!")
+    }
 });

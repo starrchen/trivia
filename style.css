@@ -1,4 +1,5 @@
 body {
+  background-image: url("http://wallpapercave.com/wp/n7SuRmb.png");
   background-color: black;
   margin: 0 auto;
   font-family: sans-serif;
@@ -13,7 +14,7 @@ h1{
 #gameboard {
   width: 500px;
   height: 500px;
-  background-color: dimgrey;
+  background-color: black;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;

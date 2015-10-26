@@ -15,7 +15,7 @@ var setScore = function() {
 };
 
 var triviaPrompts = [
-  // question : answer choices
+  // [ question, answer choices[A, B, C], right answer, wrong answers[1, 2] ]
   [ "Question 1", ["Answer 1A", "Answer 1B", "Answer 1C"], "C", ["A", "B"] ],
   [ "Question 2", ["Answer 2A", "Answer 2B", "Answer 2C"], "B", ["A", "C"] ],
   [ "Question 3", ["Answer 3A", "Answer 3B", "Answer 3C"], "C", ["A", "B"] ],
@@ -23,7 +23,7 @@ var triviaPrompts = [
   [ "Question 5", ["Answer 5A", "Answer 5B", "Answer 5C"], "B", ["A", "C"] ],
 ];
 
-// adds "Question 1" to the question div
+// adds the question string to the question div
 var addQuestion = function() {
   $(".question").text(triviaPrompts[questionCount][0]);
 };
@@ -58,7 +58,7 @@ var chooseAnswer = function(){
   };
 
 
-  // // clicking on a WRONG answer div: (1), (2), and (3) remain the same with different right-or-wrong text and different score
+  // clicking on a WRONG answer div: (1), (2), and (3) remain the same with different right-or-wrong text and different score
 
   var wrongAnswer = function () {
     $(".answer").css("color", "grey"); //(2)
@@ -71,6 +71,7 @@ var chooseAnswer = function(){
 
 
   var answerChoices = function() {
+    $(".answer").off("click");
     $("#" + triviaPrompts[questionCount][2]).on("click", rightAnswer);
     $("#" + triviaPrompts[questionCount][3][0]).on("click", wrongAnswer);
     $("#" + triviaPrompts[questionCount][3][1]).on("click", wrongAnswer);
@@ -78,6 +79,7 @@ var chooseAnswer = function(){
 
   answerChoices();
 };
+
 
 $(".next").on("click", function(){
   questionCount++;
@@ -87,4 +89,8 @@ $(".next").on("click", function(){
   $(".answer").css("color", "black");
   clickCount = 0;
   chooseAnswer();
+
+  // if (questionCount >= (triviaPrompts.length - 1)) {
+  //   $(".next").text("Game over!")
+  // }
 });

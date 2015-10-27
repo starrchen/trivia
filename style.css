@@ -32,6 +32,7 @@ h1{
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 #answers{
@@ -46,23 +47,25 @@ h1{
   padding: 10px;
   margin-top: 3px;
   margin-bottom: 3px;
+  border-radius: 20px;
 }
 
 .right-or-wrong {
-  width: 200px;
+  width: 180px;
   background-color: lavender;
   margin: 0 auto;
-  padding: 10px;
   margin-top: 20px;
+  padding: 10px;
 }
 
 .score {
-  width: 200px;
+  width: 190px;
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: indigo;
   color: white;
-  padding: 10px;
+  padding: 5px;
+
 }
 
 .next {
@@ -71,6 +74,12 @@ h1{
   background-color: firebrick;
   color: white;
   padding: 10px;
+  border-radius: 20px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
 }
 
 .image {

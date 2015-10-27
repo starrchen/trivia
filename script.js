@@ -98,7 +98,7 @@ $(".next").on("click", function(){
 
 // for the last question, next box changes to a "game over" box
   if (questionCount >= (triviaPrompts.length - 1)) {
-      $(".next").text("Game over!");
+      $(".next").html("<a href='https://www.youtube.com/v/v4IC7qaNr7I&autoplay=1' target='_blank'>Game over!</a>");
       $(".next").on("click", function(){
         window.location = "https://www.youtube.com/v/v4IC7qaNr7I";
       })

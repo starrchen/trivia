@@ -2,7 +2,55 @@
 
 ## Halloween
 
-*
+* What is the name of the cat in Hocus Pocus (1993)?
+ * Elijah Binx
+ * Zachary Binx
+ * **Thackery Binx**
+
+* It's just a jump to the left. And then a step to the right. With your hands on your hips, you...
+ * kick your feet up high
+ * **bring your knees inside**
+ * jump towards the sky
+
+* Who is not a member of the Addams Family?
+ * Lurch
+ * Pugsley
+ * **Uncle Pester**
+
+* What is Casper the Friendly Ghost's last name?
+ * **McFadden**
+ * Wessel
+ * Harvey
+
+* How do you actually spell Beetlejuice's name?
+ * Beateljuse
+ * **Betelgeuse**
+ * Bietlegeuss
+
+* The mask in the slasher film Halloween (1978) is actually a painted mask of whose face?
+ * **William Shatner**
+ * Richard Nixon
+ * John Lennon
+
+* Which actress stars in Disney's Halloweentown franchise?
+ * **Debbie Reynolds**
+ * Janet Leigh
+ * Jamie Lee Curtis
+
+* What did NOT happen at the 'Monster Mash'?
+ * A graveyard smash
+ * Caught on in a flash
+ * **Caused quite a splash**
+
+* What kind of monster is Michael Jackson by the end of 'Thriller'?
+ * Vampire
+ * **Werewolf**
+ * Zombie
+
+* Which superstition does Stevie Wonder mention in his song 'Superstition'?
+ * Black cat
+ * **Broken mirror**
+ * Spilled salt
 
 ## Disney Animated Films
 
@@ -43,3 +91,5 @@ _Happy_
 
 * What is the name of Max Goof's pop idol in _A Goofy Movie_ (1995)?
   Powerline
+
+## Washington, D.C.

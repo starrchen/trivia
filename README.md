@@ -2,17 +2,21 @@
 
 ## Self-scoring Trivia
 
+### Behind the Scenes
+
+
+
 ### User Stories:
 
 As a player, I should be able to:
 
-* enter my answer on the same screen as the question so I can refer to the question while answering
-* choose when to submit my answer so I can only submit my answer when I am satisfied with it
+* tell the difference between my question and answer choices so I can submit an answer choice
+* choose my answer on the same screen as the question so I can refer to the question while answering
+* immediately see the correct answer after choosing so I can know if I chose correctly
 * see my score so I can keep track of my performance (# of questions correct) while I play
-* see what the trivia category is so I can anticipate what types of questions will be asked
-* know what types of answers will be accepted as correct so that I can more accurately respond to prompts
+* progress to the next question after answering so I can complete the entire quiz without skipping questions
 
-### Prompt
+### Original Prompt
 
 Pre-load your app with some questions and answers.
 

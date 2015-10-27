@@ -30,6 +30,7 @@ var triviaPrompts = [
 
 // adds the question string to the question div
 var addQuestion = function() {
+  console.log(questionCount);
   $(".question").text(triviaPrompts[questionCount][0]);
 };
 
@@ -91,18 +92,34 @@ var chooseAnswer = function(){
 // (1) hide the right/wrong box
 // (2) change answer choice text color back to black
 // (3) hide the next box, etc.
-$(".next").on("click", function(){
+var onNext = function(){
   questionCount++;
-  addQuestion();
-  addAnswers();
-  $(".right-or-wrong").hide();
-  $(".next").hide();
-  $(".answer").css("color", "black");
-  clickCount = 0;
-  chooseAnswer();
 
 // for the last question, next box changes to a "game over" box
-  if (questionCount >= (triviaPrompts.length - 1)) {
-      $(".next").html("<a href='https://www.youtube.com/v/v4IC7qaNr7I&autoplay=1' target='_blank'>Game over!</a>");
+  if ( questionCount <= (triviaPrompts.length-1)) {
+    addQuestion();
+    addAnswers();
+    $(".right-or-wrong").hide();
+    $(".next").hide();
+    $(".answer").css("color", "black");
+    clickCount = 0;
+    chooseAnswer();
+  }
+
+  if ( questionCount == (triviaPrompts.length-1 ) ) {
+      $(".next").html("Game over! " + " <p class = 'fa fa-play-circle'></p>");
+  } else if ( questionCount > (triviaPrompts.length-1 ) ) {
+    console.log("game over!");
+    window.open("https://www.youtube.com/v/v4IC7qaNr7I&autoplay=1", "_blank");
+  }
+
+};
+
+$(".next").on("click", onNext);
+$("html").on("keydown", function(e){
+  if ($(".next").css("display") !== "none"){
+    if (e.keyCode == 13) {
+      onNext();
     }
+  }
 });

@@ -14,13 +14,19 @@ h1{
   color: white;
 }
 
+p{
+  color: white;
+  line-height: 2px;
+}
+
 #gameboard {
   width: 500px;
-  height: 500px;
+  height: 520px;
   background-color: black;
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px;
+  opacity: 0.85;
 }
 
 .question {
@@ -30,7 +36,6 @@ h1{
   font-size: 16px;
   margin: auto;
   padding: 10px;
-  margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 20px;
 }

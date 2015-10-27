@@ -1,5 +1,5 @@
 body {
-  background-image: url("http://wallpapercave.com/wp/n7SuRmb.png");
+  background-image: url("images/Halloween Background.png");
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,6 +27,7 @@ h1{
   width: 400px;
   background-color: palegreen;
   color: black;
+  font-size: 16px;
   margin: auto;
   padding: 10px;
   margin-top: 10px;
@@ -80,6 +81,7 @@ h1{
 footer{
   color: white;
   font-size: 10px;
+  line-height: 3px;
   position:fixed;
   bottom:0px;
   left:0px;

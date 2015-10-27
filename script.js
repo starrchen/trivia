@@ -16,11 +16,11 @@ var setScore = function() {
 
 var triviaPrompts = [
   // [ question, answer choices[A, B, C], right answer, wrong answers[1, 2] ]
-  [ "Question 1", ["Answer 1A", "Answer 1B", "Answer 1C"], "C", ["A", "B"] ],
-  [ "Question 2", ["Answer 2A", "Answer 2B", "Answer 2C"], "B", ["A", "C"] ],
-  [ "Question 3", ["Answer 3A", "Answer 3B", "Answer 3C"], "C", ["A", "B"] ],
-  [ "Question 4", ["Answer 4A", "Answer 4B", "Answer 4C"], "A", ["B", "C"] ],
-  [ "Question 5", ["Answer 5A", "Answer 5B", "Answer 5C"], "B", ["A", "C"] ],
+  [ "What is the name of the cat in Hocus Pocus (1993)?", ["Elijah Binx", "Zachary Binx", "Thackery Binx"], "C", ["A", "B"] ],
+  [ "It's just a jump to the left. And then a step to the right. With your hands on your hips, you...", ["kick your feet up high", "bring your knees in tight", "jump towards the sky"], "B", ["A", "C"] ],
+  [ "Who is not a member of the Addams Family?", ["Lurch", "Pugsley", "Uncle Pester"], "C", ["A", "B"] ],
+  [ "What is Casper the Friendly Ghosts's last name?", ["McFadden", "Wessel", "Harvey"], "A", ["B", "C"] ],
+  [ "How do you actually spell Beetlejuice's name?", ["Beateljuse", "Betelgeuse", "Bietlegeuss"], "B", ["A", "C"] ],
 ];
 
 // adds the question string to the question div
@@ -43,13 +43,13 @@ var addAnswers = function(){
 var chooseAnswer = function(){
 
   var rightAnswer = function() {
+    if (clickCount < 1) {
     $(this).css("color", "white"); // (1)
       //change other answers to grey
       $("#" + triviaPrompts[questionCount][3][0]).css("color", "grey");
       $("#" + triviaPrompts[questionCount][3][1]).css("color", "grey"); //(2)
     $(".right-or-wrong").show();
     $(".right-or-wrong").text("Right!");
-    if (clickCount < 1) {
       score = score + 10;
     }
     setScore();
@@ -61,12 +61,14 @@ var chooseAnswer = function(){
   // clicking on a WRONG answer div: (1), (2), and (3) remain the same with different right-or-wrong text and different score
 
   var wrongAnswer = function () {
+    if (clickCount < 1) {
     $(".answer").css("color", "grey"); //(2)
     $(this).css("color", "white"); // (1)
     $(".right-or-wrong").show();
-    $(".right-or-wrong").text("Wrong, it was " +  $("#" + triviaPrompts[questionCount][2]).text());
+    $(".right-or-wrong").text("Nope, it was " +  $("#" + triviaPrompts[questionCount][2]).text() + ".");
     clickCount++;
     $(".next").show();
+    }
   };
 
 
@@ -80,7 +82,10 @@ var chooseAnswer = function(){
   answerChoices();
 };
 
-
+// clicking next div will progress to the next question and reset for each question, which will:
+// (1) hide the right/wrong box
+// (2) change answer choice text color back to black
+// (3) hide the next box, etc.
 $(".next").on("click", function(){
   questionCount++;
   addQuestion();
@@ -91,7 +96,11 @@ $(".next").on("click", function(){
   clickCount = 0;
   chooseAnswer();
 
+// for the last question, next box changes to a "game over" box
   if (questionCount >= (triviaPrompts.length - 1)) {
-      $(".next").text("Game over!")
+      $(".next").text("Game over!");
+      $(".next").on("click", function(){
+        window.location = "https://www.youtube.com/v/v4IC7qaNr7I";
+      })
     }
 });

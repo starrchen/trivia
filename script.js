@@ -21,6 +21,11 @@ var triviaPrompts = [
   [ "Who is not a member of the Addams Family?", ["Lurch", "Pugsley", "Uncle Pester"], "C", ["A", "B"] ],
   [ "What is Casper the Friendly Ghosts's last name?", ["McFadden", "Wessel", "Harvey"], "A", ["B", "C"] ],
   [ "How do you actually spell Beetlejuice's name?", ["Beateljuse", "Betelgeuse", "Bietlegeuss"], "B", ["A", "C"] ],
+  [ "The mask in the slasher film Halloween (1978) is actually a painted mask of whose face?", ["William Shatner", "Richard Nixon", "John Lennon"], "A", ["B", "C"] ],
+  [ "Which actress stars in Disney's Halloweentown franchise?", ["Debbie Reynolds", "Janet Leigh", "Jamie Lee Curtis"], "A", ["B", "C"] ],
+  [ "What did NOT happen at the 'Monster Mash'?", ["A graveyard smash", "Caught on in a flash", "Caused quite a splash"], "C", ["A", "B"] ],
+  [ "What kind of monster is Michael Jackson by the end of 'Thriller'?", ["Vampire", "Werewolf", "Zombie"], "B", ["A", "C"] ],
+  [ "Which superstition does Stevie Wonder mention in his song 'Superstition'?", ["Black cat", "Broken mirror", "Spilled salt"], "B", ["A", "C"] ]
 ];
 
 // adds the question string to the question div
@@ -99,8 +104,5 @@ $(".next").on("click", function(){
 // for the last question, next box changes to a "game over" box
   if (questionCount >= (triviaPrompts.length - 1)) {
       $(".next").html("<a href='https://www.youtube.com/v/v4IC7qaNr7I&autoplay=1' target='_blank'>Game over!</a>");
-      $(".next").on("click", function(){
-        window.location = "https://www.youtube.com/v/v4IC7qaNr7I";
-      })
     }
 });

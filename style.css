@@ -9,6 +9,10 @@ body {
   margin-bottom: 50px;
 }
 
+header{
+  margin: 10px;
+}
+
 h1{
   padding-top: 20px;
   color: white;
@@ -21,11 +25,11 @@ p{
 
 #gameboard {
   width: 500px;
-  height: 520px;
+  height: 480px;
   background-color: black;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  /*margin-top: 70px;*/
   opacity: 0.85;
 }
 

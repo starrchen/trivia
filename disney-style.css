@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Sacramento);
+
 body {
   /*background-color:;*/
   background-image: url("images/Disney Background.jpg");
@@ -17,10 +19,16 @@ header{
 h1{
   padding-top: 20px;
   color: white;
+  font-family: 'Sacramento', cursive;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 0px;
 }
 
 h2{
   color: white;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 #gameboard {

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica);
+
 body {
   background-image: url("images/Halloween Background.png");
   background-color: black;
@@ -16,6 +18,8 @@ header{
 h1{
   padding-top: 20px;
   color: white;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 30px;
 }
 
 p{

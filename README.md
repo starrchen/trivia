@@ -34,10 +34,13 @@ On the final question, the "Next" box changes to a "Game over" box and will open
 At the top, there is a small icon that allows the user to go to the other trivia set - Halloween if there is a pumpkin or Disney if there is Mickey Mouse. Each trivia set has its own background image, color scheme, favicon, and fun video.
 
 Features that would be added given more time include:
+* Image corresponding with right answer would appear after choice selection
+<!-- This is pretty doable but began to get cumbersome because of existing styling -->
 * Randomized question order
 * Randomized answer choice order
 * Toggle music option (click to play music, click to stop)
 * Timed game option and/or time-based scoring
+* Konami code
 
 ### Original Prompt
 

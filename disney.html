@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disney Trivia!</title>
+  <link rel="stylesheet" href="disney-style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel = "icon" type = "image/x-icon" href = "images/disney-favicon.ico" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img src="images/pumpkin.png" alt = "Pumpkin logo" width = "12px"></a>
+  </header>
+
+  <div id = "gameboard">
+    <h1>Disney Animated Movie Trivia!</h1>
+    <h2>Try to get 100 points!</h2>
+
+    <div class = "image"></div>
+    <!--Intended to put some spoopy images in this div, but putting that in the icebox for now.-->
+
+    <div class = "question"></div>
+
+    <div id = "answers">
+      <div class = "answer" id = "A"></div>
+      <div class = "answer" id = "B"></div>
+      <div class = "answer" id = "C"></div>
+    </div>
+
+    <div class = "right-or-wrong" style = "display:none"></div>
+
+    <div class = "score"></div>
+
+    <div class = "next" style = "display:none">Next question!</div>
+
+  </div>
+
+  <footer>
+    <span class = "fa fa-star fa-spin"></span>
+    <p>&copy; Starr Chen 2015</p>
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="disney-script.js"></script>
+
+</body>
+</html>

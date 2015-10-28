@@ -1,8 +1,9 @@
 body {
-  background-image: url("images/Halloween Background.png");
-  background-color: black;
+  /*background-color:;*/
+  background-image: url("images/Disney Background.jpg");
   background-position: center;
-  background-repeat: no-repeat;
+  background-size: 520px;
+  background-repeat: repeat;
     margin: 0 auto;
   font-family: sans-serif;
   text-align: center;
@@ -18,14 +19,13 @@ h1{
   color: white;
 }
 
-p{
+h2{
   color: white;
-  line-height: 2px;
 }
 
 #gameboard {
   width: 500px;
-  height: 480px;
+  height: 500px;
   background-color: black;
   margin-left: auto;
   margin-right: auto;
@@ -35,8 +35,8 @@ p{
 
 .question {
   width: 400px;
-  background-color: palegreen;
-  color: black;
+  background-color: firebrick;
+  color: white;
   font-size: 16px;
   margin: auto;
   padding: 10px;
@@ -50,7 +50,7 @@ p{
 
 .answer {
   width: 400px;
-  background-color: darkorange;
+  background-color: skyblue;
   color: black;
   margin: auto;
   padding: 10px;
@@ -61,7 +61,7 @@ p{
 
 .right-or-wrong {
   width: 180px;
-  background-color: lavender;
+  background-color: lemonchiffon;
   margin: 0 auto;
   margin-top: 20px;
   padding: 10px;
@@ -80,8 +80,8 @@ p{
 .next {
   width: 200px;
   margin: 0 auto;
-  background-color: firebrick;
-  color: white;
+  background-color: yellow;
+  color: black;
   padding: 10px;
   border-radius: 20px;
 }
@@ -96,8 +96,13 @@ a{
   margin: 0 auto;
 }
 
+p{
+  color: white: ;
+  line-height: 2px;
+}
+
 footer{
-  color: white;
+  color: black;
   font-size: 10px;
   line-height: 3px;
   position:fixed;

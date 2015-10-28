@@ -16,16 +16,16 @@ var setScore = function() {
 
 var triviaPrompts = [
   // Format: [ question, answer choices[A, B, C], right answer, wrong answers[1, 2] ]
-  [ "What is the name of the cat in Hocus Pocus (1993)?", ["Elijah Binx", "Zachary Binx", "Thackery Binx"], "C", ["A", "B"] ],
-  [ "It's just a jump to the left. And then a step to the right. With your hands on your hips, you...", ["kick your feet up high", "bring your knees in tight", "jump towards the sky"], "B", ["A", "C"] ],
-  [ "Who is not a member of the Addams Family?", ["Lurch", "Pugsley", "Uncle Pester"], "C", ["A", "B"] ],
-  [ "What is Casper the Friendly Ghosts's last name?", ["McFadden", "Wessel", "Harvey"], "A", ["B", "C"] ],
-  [ "How do you actually spell Beetlejuice's name?", ["Beateljuse", "Betelgeuse", "Bietlegeuss"], "B", ["A", "C"] ],
-  [ "The mask in the slasher film Halloween (1978) is actually a painted mask of whose face?", ["William Shatner", "Richard Nixon", "John Lennon"], "A", ["B", "C"] ],
-  [ "Which actress stars in Disney's Halloweentown franchise?", ["Debbie Reynolds", "Janet Leigh", "Jamie Lee Curtis"], "A", ["B", "C"] ],
-  [ "What did NOT happen at the 'Monster Mash'?", ["A graveyard smash", "Caught on in a flash", "Caused quite a splash"], "C", ["A", "B"] ],
-  [ "What kind of monster is Michael Jackson by the end of 'Thriller'?", ["Vampire", "Werewolf", "Zombie"], "B", ["A", "C"] ],
-  [ "Which superstition does Stevie Wonder mention in his song 'Superstition'?", ["Black cat", "Broken mirror", "Spilled salt"], "B", ["A", "C"] ]
+  [ "What was the first animated film to be nominated at the Academy Awards for Best Picture?", ["Fantasia (1940)", "Beauty and the Beast (1991)", "The Lion King (1994)"], "B", ["A", "C"] ],
+  [ "Which of these is not a Disney animated film heroine?", ["Anastasia", "Bianca", "Eilonwy"], "A", ["B", "C"] ],
+  [ "What was the last film to use the storybook introduction sequence?", ["The Sword in the Stone (1963)", "Robin Hood (1973)", "The Little Mermaid (1989)"], "B", ["A", "C"] ],
+  [ "What is the name of Alice's cat in Alice in Wonderland (1951)?", ["Dana", "Diana", "Dinah"], "C", ["A", "B"] ],
+  [ "Which of these is not one of the Seven Dwarves in Snow White and the Seven Dwarfs (1937)?", ["Bashful", "Wheezy", "Happy"], "B", ["A", "C"] ],
+  [ "What was the first film released during the 'Disney Renaissance'?", ["The Little Mermaid (1989)", "Lilo & Stitch (2002)", "The Princess & the Frog (2009)"], "A", ["B", "C"] ],
+  [ "What film is the inspiration for the Disney theme park ride Splash Mountain?", ["Make Mine Music (1946)", "Song of the South (1946)", "The Adventures of Ichabod and Mr. Toad (1949)"], "B", ["A", "C"] ],
+  [ "In which film can you find a character named Lucifer?", ["Cinderella (1950)", "The Sword in the Stone (1963)", "The Rescuers (1977)"], "A", ["B", "C"] ],
+  [ "In Aladdin (1992), how long did Genie spend in his lamp?", ["100 years", "1,000 years", "10,000 years"], "C", ["A", "B"] ],
+  [ "What is the name of Max Goof's pop idol in _A Goofy Movie_ (1995)?", ["Powerline", "Megawatt", "I2I"], "A", ["B", "C"] ]
 ];
 
 // adds the question string to the question div
@@ -107,7 +107,7 @@ var onNext = function(){
       $(".next").html("Game over! " + " <p class = 'fa fa-play-circle'></p>");
   } else if ( questionCount > (triviaPrompts.length-1 ) ) {
     console.log("game over!");
-    window.open("https://www.youtube.com/v/v4IC7qaNr7I&autoplay=1", "_blank");
+    window.open("https://www.youtube.com/v/nlM60Nwc6CE&autoplay=1", "_blank");
   }
 
 };

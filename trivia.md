@@ -55,41 +55,53 @@
 ## Disney Animated Films
 
 * What was the first animated film to be nominated at the Academy Awards for Best Picture?
-  Beauty and the Beast (1996)
-
-* What was the first film released during the 'Disney Renaissance'?
-  The Little Mermaid (1989)
+ * Fantasia (1940)
+ * **Beauty and the Beast (1991)**
+ * The Lion King (1994)
 
 * Which of these is not a Disney animated film heroine?
-_Anastasia_
-_Bianca
-_Eilonwy_
-_Kida_
-  Anastasia
-
-* Which of these is not one of the Seven Dwarves in _Snow White and the Seven Dwarfs_ (1937)?
-_Bashful_
-_Sneezy_
-_Wheezy_
-_Happy_
-  Wheezy
+ * **Anastasia**
+ * Bianca
+ * Eilonwy
 
 * What was the last film to use the storybook introduction sequence?
-  Robin Hood (1973)
+ * The Sword in the Stone (1963)
+ * **Robin Hood (1973)**
+ * The Little Mermaid (1989)
 
 * What is the name of Alice's cat in _Alice in Wonderland_ (1951)?
-  Dinah
+ * Dana
+ * Diana
+ * **Dinah**
+
+* Which of these is not one of the Seven Dwarves in _Snow White and the Seven Dwarfs_ (1937)?
+ * Bashful
+ * **Wheezy**
+ * Happy
+
+* What was the first film released during the 'Disney Renaissance'?
+ * **The Little Mermaid (1989)**
+ * Lilo & Stitch (2002)
+ * The Princess & the Frog (2009)
 
 * What film is the inspiration for the Disney theme park ride Splash Mountain?
-  Song of the South (1946)
+ * Make Mine Music (1946)
+ * **Song of the South (1946)**
+ * The Adventures of Ichabod and Mr. Toad (1949)
 
 * In which film can you find a character named Lucifer?
-  Cinderella (1950) -- her stepmother's cat
+ * **Cinderella (1950)**
+ * The Sword in the Stone (1963)
+ * The Rescuers (1977)
 
 * In _Aladdin_ (1992), how long did Genie spend in his lamp?
-  10,000 years ("... will give you such a crick in the neck!")
+ * 100 years
+ * 1,000 years
+ * **10,000 years**
 
 * What is the name of Max Goof's pop idol in _A Goofy Movie_ (1995)?
-  Powerline
+ * **Powerline**
+ * Megawatt
+ * I2I
 
 ## Washington, D.C.

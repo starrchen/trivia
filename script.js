@@ -15,7 +15,7 @@ var setScore = function() {
 };
 
 var triviaPrompts = [
-  // [ question, answer choices[A, B, C], right answer, wrong answers[1, 2] ]
+  // Format: [ question, answer choices[A, B, C], right answer, wrong answers[1, 2] ]
   [ "What is the name of the cat in Hocus Pocus (1993)?", ["Elijah Binx", "Zachary Binx", "Thackery Binx"], "C", ["A", "B"] ],
   [ "It's just a jump to the left. And then a step to the right. With your hands on your hips, you...", ["kick your feet up high", "bring your knees in tight", "jump towards the sky"], "B", ["A", "C"] ],
   [ "Who is not a member of the Addams Family?", ["Lurch", "Pugsley", "Uncle Pester"], "C", ["A", "B"] ],
@@ -41,13 +41,12 @@ var addAnswers = function(){
   $("#C").text( triviaPrompts[questionCount][1][2] );
 };
 
-// clicking a CORRECT answer div:
-// (1) changes the text color to white,
-// (2) changes other answers to grey,
-// (3) shows if right/wrong & score
-
 var chooseAnswer = function(){
 
+  // clicking a CORRECT answer div:
+  // (1) changes the text color to white,
+  // (2) changes other answers to grey,
+  // (3) shows if right/wrong & score
   var rightAnswer = function() {
     if (clickCount < 1) {
     $(this).css("color", "white"); // (1)
@@ -63,9 +62,7 @@ var chooseAnswer = function(){
     $(".next").show();
   };
 
-
   // clicking on a WRONG answer div: (1), (2), and (3) remain the same with different right-or-wrong text and different score
-
   var wrongAnswer = function () {
     if (clickCount < 1) {
     $(".answer").css("color", "grey"); //(2)
@@ -77,9 +74,9 @@ var chooseAnswer = function(){
     }
   };
 
-
+  // right/wrong changes occur when one of the answer choice divs is clicked
   var answerChoices = function() {
-    $(".answer").off("click");
+    $(".answer").off("click"); // removes any previously bound click event listeners
     $("#" + triviaPrompts[questionCount][2]).on("click", rightAnswer);
     $("#" + triviaPrompts[questionCount][3][0]).on("click", wrongAnswer);
     $("#" + triviaPrompts[questionCount][3][1]).on("click", wrongAnswer);
@@ -94,8 +91,6 @@ var chooseAnswer = function(){
 // (3) hide the next box, etc.
 var onNext = function(){
   questionCount++;
-
-// for the last question, next box changes to a "game over" box
   if ( questionCount <= (triviaPrompts.length-1)) {
     addQuestion();
     addAnswers();
@@ -106,6 +101,8 @@ var onNext = function(){
     chooseAnswer();
   }
 
+// on last question, text in next div changes to "Game over!"
+// clicking the div opens spoopy video (at game over)
   if ( questionCount == (triviaPrompts.length-1 ) ) {
       $(".next").html("Game over! " + " <p class = 'fa fa-play-circle'></p>");
   } else if ( questionCount > (triviaPrompts.length-1 ) ) {
@@ -115,6 +112,7 @@ var onNext = function(){
 
 };
 
+// goes to next question on click AND on keydown - enter key
 $(".next").on("click", onNext);
 $("html").on("keydown", function(e){
   if ($(".next").css("display") !== "none"){

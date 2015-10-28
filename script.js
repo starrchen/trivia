@@ -106,6 +106,8 @@ var onNext = function(){
     chooseAnswer();
   }
 
+// on last question, text in next div changes to "Game over!"
+// clicking the div opens spoopy video (at game over)
   if ( questionCount == (triviaPrompts.length-1 ) ) {
       $(".next").html("Game over! " + " <p class = 'fa fa-play-circle'></p>");
   } else if ( questionCount > (triviaPrompts.length-1 ) ) {
@@ -115,6 +117,7 @@ var onNext = function(){
 
 };
 
+// goes to next question on click AND on keydown - enter key
 $(".next").on("click", onNext);
 $("html").on("keydown", function(e){
   if ($(".next").css("display") !== "none"){

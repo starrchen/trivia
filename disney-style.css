@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Sacramento);
+@import url(https://fonts.googleapis.com/css?family=Life+Savers);
 
 body {
   /*background-color:;*/
@@ -19,9 +19,8 @@ header{
 h1{
   padding-top: 20px;
   color: white;
-  font-family: 'Sacramento', cursive;
-  font-size: 34px;
-  font-weight: bold;
+  font-family: 'Life Savers', cursive;
+  font-size: 28px;
   margin-bottom: 0px;
 }
 

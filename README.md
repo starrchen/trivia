@@ -38,6 +38,7 @@ Features that would be added given more time include:
 * Randomized answer choice order
 * Toggle music option (click to play music, click to stop)
 * Timed game option and/or time-based scoring
+* Konami code
 
 ### Original Prompt
 

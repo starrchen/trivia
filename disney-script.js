@@ -25,7 +25,7 @@ var triviaPrompts = [
   [ "What film is the inspiration for the Disney theme park ride Splash Mountain?", ["Make Mine Music (1946)", "Song of the South (1946)", "The Adventures of Ichabod and Mr. Toad (1949)"], "B", ["A", "C"] ],
   [ "In which film can you find a character named Lucifer?", ["Cinderella (1950)", "The Sword in the Stone (1963)", "The Rescuers (1977)"], "A", ["B", "C"] ],
   [ "In Aladdin (1992), how long did Genie spend in his lamp?", ["100 years", "1,000 years", "10,000 years"], "C", ["A", "B"] ],
-  [ "What is the name of Max Goof's pop idol in _A Goofy Movie_ (1995)?", ["Powerline", "Megawatt", "I2I"], "A", ["B", "C"] ]
+  [ "What is the name of Max Goof's pop idol in A Goofy Movie (1995)?", ["Powerline", "Megawatt", "I2I"], "A", ["B", "C"] ]
 ];
 
 // adds the question string to the question div

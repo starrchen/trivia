@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // One thing that I noticed is that you have 2 separate trivia applications. Seems that much of the code and logic is consistent and repeated. I encourage you to refactor this site to incorporate themes and combine all the functionality of both sets into one application.
   addQuestion();
   addAnswers();
   setScore();
@@ -8,6 +9,8 @@ $(document).ready(function(){
 var clickCount = 0; //clicks per question should never exceed 1
 var questionCount = 0;
 var score = 0;
+// this is small, but were not really setting the score here, were updating the display with the score.
+// I see some other on the fence variable names throughout the application, but I'll address it for the first one. Naming is one of the hardest things to do in programming. Seriously though it is. Providing semantic variable names is very helpful to the collaborative process and in your own development.
 var setScore = function() {
   if (clickCount < 1) {
     $(".score").html("<p>" + score + " points</p>");
@@ -16,6 +19,15 @@ var setScore = function() {
 
 var triviaPrompts = [
   // Format: [ question, answer choices[A, B, C], right answer, wrong answers[1, 2] ]
+  // So there's 2 ways we can represent this data. One is the way you did it with arrays. Another is to use objects. When using arrays, it forces us to use integers to index because it's an ordered list. That can become cryptic as we start to scale our applications. We're better of having an array of trivia prompt objects. In that way we have semantic indexing. Something like this:
+  // {
+  //   question: "What is the name of the cat in Hocus Pocus (1993)?",
+  //   choices: ["Elijah Binx", "Zachary Binx", "Thackery Binx"],
+  //   answer: "C",
+  //   wrongAnswers: ["A", "B"]
+  // }
+  // In this way, if we need to add another property just add another key value pair.. I don't need to remember hmm what was the index of the last property I created. This might get tricky when we deal with something that might have 15 or 20 properties.
+
   [ "What is the name of the cat in Hocus Pocus (1993)?", ["Elijah Binx", "Zachary Binx", "Thackery Binx"], "C", ["A", "B"] ],
   [ "It's just a jump to the left. And then a step to the right. With your hands on your hips, you...", ["kick your feet up high", "bring your knees in tight", "jump towards the sky"], "B", ["A", "C"] ],
   [ "Who is not a member of the Addams Family?", ["Lurch", "Pugsley", "Uncle Pester"], "C", ["A", "B"] ],
@@ -81,7 +93,7 @@ var chooseAnswer = function(){
     $("#" + triviaPrompts[questionCount][3][0]).on("click", wrongAnswer);
     $("#" + triviaPrompts[questionCount][3][1]).on("click", wrongAnswer);
   };
-
+  // this is potentially dangerous. what was the rationale for defining these functions within the chooseAnswer function? the reason this could be potentially dangerous is about scope and context. Read comment below where you invoked chooseAnswer. I would seperate these functionalities a litte more.
   answerChoices();
 };
 
@@ -99,6 +111,7 @@ var onNext = function(){
     $(".answer").css("color", "black");
     clickCount = 0;
     chooseAnswer();
+    // Here, we invoke chooseAnswer. Every time onNext occurs, we redefine 3 new functions, every time.
   }
 
 // on last question, text in next div changes to "Game over!"
@@ -109,9 +122,11 @@ var onNext = function(){
     console.log("game over!");
     window.open("https://www.youtube.com/v/v4IC7qaNr7I&autoplay=1", "_blank");
   }
+// think it would be cool if you gave the user an option to reset the game.
 
 };
 
+// very cool
 // goes to next question on click AND on keydown - enter key
 $(".next").on("click", onNext);
 $("html").on("keydown", function(e){
